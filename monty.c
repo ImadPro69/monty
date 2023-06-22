@@ -1,36 +1,70 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h> // Add this line to include string.h
+#include <string.h>
 
-void monty_execute(char *line)
+stack_t *stack = NULL;
+
+void monty_execute(FILE *file)
 {
-    if (strlen(line) <= 1)
-        return;
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
+    unsigned int line_number = 0;
 
-    char *opcode = strtok(line, " \t\n");
-    char *arg = strtok(NULL, " \t\n");
-
-    instruction_t instructions[] = {
-        {"push", push},
-        {"pall", pall},
-        {NULL, NULL} // Add a sentinel element to mark the end of the array
-    };
-
-    int i;
-    void (*opcode_func)(stack_t **, unsigned int);
-
-    for (i = 0; instructions[i].opcode != NULL; i++)
+    while ((read = getline(&line, &len, file)) != -1)
     {
-        if (strcmp(opcode, instructions[i].opcode) == 0)
+        line_number++;
+
+        char *opcode = strtok(line, " \t\n");
+        if (opcode == NULL || opcode[0] == '#')
+            continue;
+
+        char *arg = strtok(NULL, " \t\n");
+
+        int i;
+        instruction_t instructions[] = {
+            {"push", push},
+            {"pall", pall},
+            {NULL, NULL} // Add a sentinel element to mark the end of the array
+        };
+
+        for (i = 0; instructions[i].opcode != NULL; i++)
         {
-            opcode_func = instructions[i].f;
-            opcode_func(&stack, line_number);
-            return;
+            if (strcmp(opcode, instructions[i].opcode) == 0)
+            {
+                instructions[i].f(&stack, line_number);
+                break;
+            }
+        }
+
+        if (instructions[i].opcode == NULL)
+        {
+            fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+            free(line);
+            exit(EXIT_FAILURE);
         }
     }
 
-    fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-    exit(EXIT_FAILURE);
+    free(line);
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc != 2)
+    {
+        fprintf(stderr, "Usage: monty file\n");
+        return EXIT_FAILURE;
+    }
+
+    FILE *file = fopen(argv[1], "r");
+    if (file == NULL)
+    {
+        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+        return EXIT_FAILURE;
+    }
+
+    monty_execute(file);
+
+    fclose(file);
+    return EXIT_SUCCESS;
 }
 

@@ -1,17 +1,7 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, int value)
 {
-    if (arg == NULL || !is_number(arg))
-    {
-        fprintf(stderr, "L%d: usage: push integer\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-
-    int value = atoi(arg);
-
     stack_t *new_node = malloc(sizeof(stack_t));
     if (new_node == NULL)
     {
@@ -20,12 +10,7 @@ void push(stack_t **stack, unsigned int line_number)
     }
 
     new_node->n = value;
-    new_node->prev = NULL;
     new_node->next = *stack;
-
-    if (*stack != NULL)
-        (*stack)->prev = new_node;
-
     *stack = new_node;
 }
 

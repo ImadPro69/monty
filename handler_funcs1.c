@@ -2,9 +2,9 @@
 #include "lists.h"
 
 /**
- * pint_handler - handles the pint instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Pint_handler - Handles the pint instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void pint_handler(stack_t **stack, unsigned int line_number)
 {
@@ -21,9 +21,9 @@ void pint_handler(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pop_handler - handles the pop instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Pop_handler - Handles the pop instruction
+ * @stack: double pointer to the stack 
+ * @line_number: number of the line
  */
 void pop_handler(stack_t **stack, unsigned int line_number)
 {
@@ -40,9 +40,9 @@ void pop_handler(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * swap_handler - handles the swap instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Swap_handler - Handles the swap instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void swap_handler(stack_t **stack, unsigned int line_number)
 {
@@ -69,9 +69,9 @@ void swap_handler(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * add_handler - handles the add instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Add_handler - Handles the add instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void add_handler(stack_t **stack, unsigned int line_number)
 {
@@ -100,9 +100,9 @@ void add_handler(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * nop_handler - handles the nop instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Nop_handler - Handles the nop instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void nop_handler(stack_t **stack, unsigned int line_number)
 {

@@ -1,20 +1,14 @@
-#ifndef MONTY_H
-#define MONTY_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <unistd.h>
 
-/**
- * struct stack_s - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prev: points to the previous element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
- *
- * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+/*
+ * struct stack_s - Doubly linked list representation of a stack (or queue)
+ * @n: Integer value
+ * @prev: Pointer to the previous element of the stack (or queue)
+ * @next: Pointer to the next element of the stack (or queue)
  */
 typedef struct stack_s
 {
@@ -24,12 +18,9 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
- *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * struct instruction_s - Represents an opcode and its corresponding function
+ * @opcode: The opcode
+ * @f: Function pointer to handle the opcode
  */
 typedef struct instruction_s
 {
@@ -38,13 +29,10 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct args_s - structure of arguments from main
- * @av: name of the file from the command line
- * @ac: number of arguments from main
- * @line_number: number of the current line in the file
- *
- * Description: arguments passed to main from the command line
- * used in different functions, organized in a struct for clarity
+ * struct args_s - Structure for command line arguments from main
+ * @av: Name of the file from the command line
+ * @ac: Number of arguments from main
+ * @line_number: Number of the current line in the file
  */
 typedef struct args_s
 {
@@ -54,12 +42,12 @@ typedef struct args_s
 } args_t;
 
 /**
- * struct data_s - extern data to access inside functions
- * @line: line from the file
- * @words: parsed line
- * @stack: pointer to the stack
- * @fptr: file pointer
- * @qflag: flag for queue or stack
+ * struct data_s - External data structure for accessing inside functions
+ * @line: Line from the file
+ * @words: Parsed line
+ * @stack: Pointer to the stack
+ * @fptr: File pointer
+ * @qflag: Flag for queue or stack
  */
 typedef struct data_s
 {
@@ -93,43 +81,36 @@ extern data_t data;
 #define PCHAR_FAIL "L%u: can't pchar, stack empty\n"
 #define PCHAR_RANGE "L%u: can't pchar, value out of range\n"
 
-/* main.c */
+/* File main.c */
 void monty(args_t *args);
-
-/* get_func.c */
+/* File get_func.c */
 void (*get_func(char **parsed))(stack_t **, unsigned int);
 void push_handler(stack_t **stack, unsigned int line_number);
 void pall_handler(stack_t **stack, unsigned int line_number);
-
-/* handler_funcs1.c */
+/* File handler_funcs1.c */
 void pint_handler(stack_t **stack, unsigned int line_number);
 void pop_handler(stack_t **stack, unsigned int line_number);
 void swap_handler(stack_t **stack, unsigned int line_number);
 void add_handler(stack_t **stack, unsigned int line_number);
 void nop_handler(stack_t **stack, unsigned int line_number);
-
-/* handler_funcs2.c */
+/* File handler_funcs2.c */
 void sub_handler(stack_t **stack, unsigned int line_number);
 void div_handler(stack_t **stack, unsigned int line_number);
 void mul_handler(stack_t **stack, unsigned int line_number);
 void mod_handler(stack_t **stack, unsigned int line_number);
-
-/* handler_funcs3.c */
+/* File handler_funcs3.c */
 void rotl_handler(stack_t **stack, unsigned int line_number);
 void rotr_handler(stack_t **stack, unsigned int line_number);
 void stack_handler(stack_t **stack, unsigned int line_number);
 void queue_handler(stack_t **stack, unsigned int line_number);
-
-/* char.c */
+/* File char.c */
 void pchar_handler(stack_t **stack, unsigned int line_number);
 void pstr_handler(stack_t **stack, unsigned int line_number);
-
-/* strtow.c */
+/* File strtow.c */
 int count_word(char *s);
 char **strtow(char *str);
 void free_everything(char **args);
-
-/* free.c */
+/* File free.c */
 void free_all(int all);
 
 #endif

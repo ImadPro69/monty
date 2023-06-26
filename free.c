@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * free_all - custom memory handling function
+ * Free_all - Custom memory
  * @all: flag to indicate what to free
  */
 void free_all(int all)

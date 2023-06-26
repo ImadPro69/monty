@@ -2,9 +2,9 @@
 #include "lists.h"
 
 /**
- * pchar_handler - handles the pchar instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Pchar_handler - Handles the pchar instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void pchar_handler(stack_t **stack, unsigned int line_number)
 {
@@ -29,9 +29,9 @@ void pchar_handler(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pstr_handler - handles the pstr instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * Pstr_handler - Handles the pstr instruction
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void pstr_handler(stack_t **stack, unsigned int line_number)
 {

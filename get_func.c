@@ -2,10 +2,9 @@
 #include "lists.h"
 
 /**
- * get_func - selects the right function
+ * Get_func - Selects the right function
  * @parsed: line from the bytecode file passed to main
- *
- * Return: pointer to the selected function, or NULL on failure
+ * Return: pointer to the selected function
  */
 void (*get_func(char **parsed))(stack_t **, unsigned int)
 {
@@ -44,8 +43,8 @@ void (*get_func(char **parsed))(stack_t **, unsigned int)
 
 /**
  * push_handler - handles the push instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void push_handler(stack_t **stack, unsigned int line_number)
 {
@@ -84,8 +83,8 @@ void push_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * pall_handler - handles the pall instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: double pointer to the stack
+ * @line_number: number of the line
  */
 void pall_handler(stack_t **stack, unsigned int line_number)
 {

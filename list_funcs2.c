@@ -2,13 +2,12 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts a node at a given index
- * in a doubly linked list
- * @h: double pointer to the list
- * @idx: index of the node to insert
- * @n: data to insert
+ * insert_dnodeint_at_index - Inserts a node at a given index in a doubly linked list
+ * @h: Double pointer to the head of the doubly linked list
+ * @idx: Index at which the node should be inserted
+ * @n: Data value of the new node
  *
- * Return: address of the new node, or NULL if it failed
+ * Return: Pointer to the newly inserted node, or NULL on failure
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -44,11 +43,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * add_dnodeint_end - adds a new node at the end of a doubly linked list
- * @head: double pointer to the list
- * @n: data to insert in the new node
+ * add_dnodeint_end - Adds a new node at the end of a doubly linked list
+ * @head: Double pointer to the head of the doubly linked list
+ * @n: Data value of the new node
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: Pointer to the newly added node, or NULL on failure
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
@@ -82,8 +81,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 }
 
 /**
- * free_dlistint - frees a doubly linked list
- * @head: pointer to the list to free
+ * free_dlistint - Frees a doubly linked list
+ * @head: Pointer to the head of the doubly linked list
  */
 void free_dlistint(dlistint_t *head)
 {

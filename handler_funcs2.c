@@ -3,8 +3,8 @@
 
 /**
  * sub_handler - handles the sub instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void sub_handler(stack_t **stack, unsigned int line_number)
 {
@@ -34,8 +34,8 @@ void sub_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * div_handler - handles the div instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void div_handler(stack_t **stack, unsigned int line_number)
 {
@@ -72,8 +72,8 @@ void div_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * mul_handler - handles the mul instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void mul_handler(stack_t **stack, unsigned int line_number)
 {
@@ -103,8 +103,8 @@ void mul_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * mod_handler - handles the mod instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void mod_handler(stack_t **stack, unsigned int line_number)
 {

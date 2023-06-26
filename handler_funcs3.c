@@ -3,8 +3,8 @@
 
 /**
  * rotl_handler - handles the rotl instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void rotl_handler(stack_t **stack, unsigned int line_number)
 {
@@ -23,8 +23,8 @@ void rotl_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * rotr_handler - handles the rotr instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void rotr_handler(stack_t **stack, unsigned int line_number)
 {
@@ -43,8 +43,8 @@ void rotr_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * stack_handler - handles the stack instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void stack_handler(stack_t **stack, unsigned int line_number)
 {
@@ -56,8 +56,8 @@ void stack_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * queue_handler - handles the queue instruction
- * @stack: double pointer to the stack to push to
- * @line_number: number of the line in the file
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void queue_handler(stack_t **stack, unsigned int line_number)
 {

@@ -3,8 +3,8 @@
 
 /**
  * Pint_handler - Handles the pint instruction
- * @stack: double pointer to the stack
- * @line_number: number of the line programm
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void pint_handler(stack_t **stack, unsigned int line_number)
 {
@@ -22,8 +22,8 @@ void pint_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * Pop_handler - Handles the pop instruction
- * @stack: double pointer to the stack 
- * @line_number: number of the line programm
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void pop_handler(stack_t **stack, unsigned int line_number)
 {
@@ -41,8 +41,8 @@ void pop_handler(stack_t **stack, unsigned int line_number)
 
 /**
  * Swap_handler - Handles the swap instruction
- * @stack: double pointer to the stack
- * @line_number: number of the line programm
+ * @stack: Pointer to the stack
+ * @line_number: Line number of the pint instruction
  */
 void swap_handler(stack_t **stack, unsigned int line_number)
 {

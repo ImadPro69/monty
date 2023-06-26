@@ -2,10 +2,10 @@
 #include "lists.h"
 
 /**
- * count_word - helper function to count the number of words in a string
- * @s: string to evaluate
+ * count_word - Helper function to count the number of words in a string
+ * @str: String to count the words from
  *
- * Return: number of words
+ * Return: Number of words in the string
  */
 int count_word(char *s)
 {
@@ -28,11 +28,10 @@ int count_word(char *s)
 	return (w);
 }
 /**
- * **strtow - splits a string into words
- * @str: string to split
+ * strtow - Splits a string into words
+ * @str: String to be split
  *
- * Return: pointer to an array of strings (Success)
- * or NULL (Error)
+ * Return: Pointer to an array of strings (words), or NULL on failure
  */
 char **strtow(char *str)
 {
@@ -76,8 +75,9 @@ char **strtow(char *str)
 }
 
 /**
- * free_everything - frees arrays of strings
- * @args: array of strings to free
+ * free_everything - Frees arrays of strings
+ * @arrays: Pointer to the array of strings
+ * @size: Size of the array
  */
 void free_everything(char **args)
 {

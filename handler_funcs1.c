@@ -4,7 +4,7 @@
 /**
  * Pint_handler - Handles the pint instruction
  * @stack: double pointer to the stack
- * @line_number: number of the line
+ * @line_number: number of the line programm
  */
 void pint_handler(stack_t **stack, unsigned int line_number)
 {
@@ -23,7 +23,7 @@ void pint_handler(stack_t **stack, unsigned int line_number)
 /**
  * Pop_handler - Handles the pop instruction
  * @stack: double pointer to the stack 
- * @line_number: number of the line
+ * @line_number: number of the line programm
  */
 void pop_handler(stack_t **stack, unsigned int line_number)
 {
@@ -42,7 +42,7 @@ void pop_handler(stack_t **stack, unsigned int line_number)
 /**
  * Swap_handler - Handles the swap instruction
  * @stack: double pointer to the stack
- * @line_number: number of the line
+ * @line_number: number of the line programm
  */
 void swap_handler(stack_t **stack, unsigned int line_number)
 {
@@ -71,7 +71,7 @@ void swap_handler(stack_t **stack, unsigned int line_number)
 /**
  * Add_handler - Handles the add instruction
  * @stack: double pointer to the stack
- * @line_number: number of the line
+ * @line_number: number of the line programm
  */
 void add_handler(stack_t **stack, unsigned int line_number)
 {
@@ -102,7 +102,7 @@ void add_handler(stack_t **stack, unsigned int line_number)
 /**
  * Nop_handler - Handles the nop instruction
  * @stack: double pointer to the stack
- * @line_number: number of the line
+ * @line_number: number of the line programm
  */
 void nop_handler(stack_t **stack, unsigned int line_number)
 {

@@ -3,7 +3,7 @@
 
 /**
  * Free_all - Custom memory
- * @all: flag to indicate what to free
+ * @all: Flag to indicate
  */
 void free_all(int all)
 {

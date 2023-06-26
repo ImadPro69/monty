@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * dlistint_len - returns the number of nodes in a doubly linked list
- * @h: pointer to the list
+ * dlistint_len - Returns the number of nodes in a doubly linked list
+ * @h: Pointer to the head of the doubly linked list
  *
- * Return: number of nodes
+ * Return: Number of nodes in the doubly linked list
  */
 size_t dlistint_len(const dlistint_t *h)
 {
@@ -23,11 +23,11 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * add_dnodeint - adds a new node at the beginning of a doubly linked list
- * @head: double pointer to the list
- * @n: data to insert in the new node
+ * add_dnodeint - Adds a new node at the beginning of a doubly linked list
+ * @head: Double pointer to the head of the doubly linked list
+ * @n: Data value of the new node
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: Pointer to the newly added node, or NULL on failure
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -54,10 +54,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 }
 
 /**
- * print_dlistint - prints a doubly linked list
- * @h: pointer to the list
+ * print_dlistint - Prints a doubly linked list
+ * @h: Pointer to the head of the doubly linked list
  *
- * Return: number of nodes in the list
+ * Return: Number of nodes in the doubly linked list
  */
 size_t print_dlistint(const dlistint_t *h)
 {
@@ -77,7 +77,7 @@ size_t print_dlistint(const dlistint_t *h)
 }
 
 /**
- * delete_dnodeint_at_index - deltes a node in a doubly linked list
+ * delete_dnodeint_at_index - Deletes a node at a given index in a doubly linked list
  * at a given index
  * @head: double pointer to the list
  * @index: index of the node to delete
@@ -116,7 +116,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 
 /**
- * get_dnodeint_at_index - gets the nth node of a doubly linked list
+ * get_dnodeint_at_index - Retrieves the node at a given index in a doubly linked list
  * @head: pointer to the list
  * @index: index of the node to return
  *
